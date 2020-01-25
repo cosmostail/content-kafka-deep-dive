@@ -97,3 +97,16 @@ services:
       - zookeep1
       - zookeep2
       - zookeep3
+
+  kafka_manager:
+    image: malloc/kafka-manager:latest
+    build:
+      context: ./
+    links:
+      - kafka1
+      - kafka2
+      - kafka3
+      - zookeep1
+      - zookeep2
+      - zookeep3
+
